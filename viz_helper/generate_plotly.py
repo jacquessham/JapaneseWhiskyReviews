@@ -1,8 +1,8 @@
 import pandas as pd
 import plotly
 import plotly.graph_objs as go
-from data import *
-from layout import *
+from viz_helper.data import *
+from viz_helper.layout import *
 
 
 def generate_plotly_viz(df, metadata, viz_type, viz_name):

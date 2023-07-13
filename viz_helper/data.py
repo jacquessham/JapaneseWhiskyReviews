@@ -1,5 +1,5 @@
-from check_metadata import *
-from generate_boxplot import *
+from viz_helper.check_metadata import *
+from viz_helper.generate_boxplot import *
 
 
 def generate_plotlydata(df, metadata, viz_type):

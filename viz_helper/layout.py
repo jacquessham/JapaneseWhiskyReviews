@@ -29,6 +29,8 @@ def generate_layout(title=None, xaxis=None, yaxis=None, legend=None,
     # Handle Legend
     if type(legend) == dict:
         pass
+    elif legend is None:
+        pass
     else:
         legend = {'x': 0.7, 'y': 1, 'orientation': 'h'}
 

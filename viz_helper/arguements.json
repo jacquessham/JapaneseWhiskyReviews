@@ -1,0 +1,9 @@
+{
+	"df_directory":"../japanese_whisky_review.csv",
+	"viz_type":"boxplot",
+	"viz_name":"Review Sentiment Score Distribution by Whisky",
+	"metadata":{
+		"x":"Brand", 
+		"y":"score"
+	}
+}
