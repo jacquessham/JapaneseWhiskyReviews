@@ -3,7 +3,7 @@ import string
 import pandas as pd
 import numpy as np
 from nltk.stem.porter import *
-from sklearn.feature_extraction import stop_words
+from sklearn.feature_extraction import _stop_words
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 
@@ -18,7 +18,7 @@ def tokenizer(post):
     temp_list = clean_words(post)
     stemmer = PorterStemmer()
     temp_list = [stemmer.stem(word) for word in temp_list if 
-                 word != '' and word not in stop_words.ENGLISH_STOP_WORDS]
+                 word != '' and word not in _stop_words.ENGLISH_STOP_WORDS]
     return temp_list
 
 # Read file and extract the comments and convert to np array
@@ -54,10 +54,10 @@ def get_words(comment):
     word_dict = {}
     for word in temp_list:
         word_stemmed = stemmer.stem(word)
-        if word != '' and word not in stop_words.ENGLISH_STOP_WORDS \
+        if word != '' and word not in _stop_words.ENGLISH_STOP_WORDS \
            and word_stemmed not in word_dict:
            word_dict[word_stemmed] = [word]
-        elif word != '' and word not in stop_words.ENGLISH_STOP_WORDS \
+        elif word != '' and word not in _stop_words.ENGLISH_STOP_WORDS \
            and word_stemmed in word_dict:
            word_dict[word_stemmed] = word_dict[word_stemmed].append(word)
     return word_dict
