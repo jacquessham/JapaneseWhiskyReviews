@@ -31,7 +31,7 @@ Once the dashboard is ready, you may access it at <b>127.0.0.1:9000</b>
 ## Technical Explanation
 ### Sentiment Analysis
 We will use vaderSentiment to calculate the sentiment score for each review. Then, Plotly will visualize the range of sentiment score of each brand with a boxplot and render on the Dashboard. It looks like this. <br><br>
-![Screenshot](sentiment_score_boxplot.png)
+<img src=jp_whisky_boxplot.png>
 <br>
 From the boxplot, we can learn that reviewers in general have a positive view on the Japanese whiskies, while they have better impression on Nikka and Hibiki. Interestingly, the median sentiment score on Yamazaki is 0, which means neutral.
 
